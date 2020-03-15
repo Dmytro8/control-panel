@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/round-slider@1.4.0/dist/roundslider.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/119910457c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="left-side-header">
+        <div id="hh" class="hamburgerWrapper">
+          <input type="checkbox" id="checkbox1" class="checkbox1 hidden" />
+          <label for="checkbox1">
+            <div class="hamburger hamburger1">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+              <span class="bar bar4"></span>
+            </div>
+          </label>
+        </div>
+        <div class="pageTitle">
+          <a href="/"><h1>IoT Admin</h1></a>
+        </div>
+      </div>
+      <div class="right-side-header">
+        <div class="icon mailLink">
+          <i class="far fa-envelope"></i
+          ><a href="mailto:contact@example.com">contact@example.com</a>
+        </div>
+        <div class="icon search">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="icon">
+          <i class="far fa-envelope"></i>
+        </div>
+        <div class="icon">
+          <i class="far fa-bell"></i>
+        </div>
+        <div class="icon profile">
+          <div class="imgProfile">
+            <img
+              src="https://images.unsplash.com/photo-1569124589354-615739ae007b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt=""
+            />
+          </div>
+          <div class="userName"><h4>User Name</h4></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <aside class="closedMenu">
+        <div id="menuWrapper" class="menuWrapperHidden">
+          <div class="dashboardTitle">
+            <div class="homeSVG">
+              <img src="./img/home.svg" alt="home" />
+            </div>
+            <div><h2>IoT Dashboard</h2></div>
+          </div>
+          <div class="optionList">
+            <ul>
+              <li id="controlls">
+                <div>
+                  <i class="fas fa-columns"></i>
+                  <a href="#">Controlls</a>
+                </div>
+                <span class="arrowHide"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="content">
+        <div class="controllerWrapper">
+          <div class="controller light">
+            <div id="iconLight" class="icon">
+              <i id="light" class="social-icon far fa-lightbulb"></i>
+            </div>
+            <div id="descriptionLight" class="description">
+              <h2>Light</h2>
+              <h3 id="lightMode"></h3>
+            </div>
+          </div>
+          <div class="controller rollerShades">
+            <div id="iconRollerShades" class="icon">
+              <i id="rollerShades" class="social-icon fab fa-microsoft"></i>
+            </div>
+            <div id="descriptionRoller" class="description">
+              <h2>Roller shades</h2>
+              <h3 id="rollerMode"></h3>
+            </div>
+          </div>
+          <div class="controller wirelessAudio">
+            <div id="iconWirelessAudio" class="icon">
+              <i id="wirelessAudio" class="social-icon fas fa-rss"></i>
+            </div>
+            <div id="descriptionWirelessAudio" class="description">
+              <h2>Wireless audio</h2>
+              <h3 id="audioMode"></h3>
+            </div>
+          </div>
+          <div class="controller coffeeMaker">
+            <div id="iconCoffeeMaker" class="icon">
+              <i id="coffeeMaker" class="social-icon fas fa-mug-hot"></i>
+            </div>
+            <div id="descriptionCoffeeMaker" class="description">
+              <h2>Coffee maker</h2>
+              <h3 id="coffeeMakerMode"></h3>
+            </div>
+          </div>
+          <div class="controller temperature">
+            <div class="links">
+              <div class="controlLinkTemperature activated">
+                <h2>Temperature</h2>
+              </div>
+              <div class="controlLinkHuminidy"><h2>Humidity</h2></div>
+            </div>
+            <div class="circleBar">
+              <div class="circleAddon">
+                <div>
+                  <div class="circleOnOff" data-click-state="0">
+                    <i id="circleOnOff" class="fas fa-power-off"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="circleAddon">
+                <div>
+                  <div class="shadow"></div>
+                </div>
+              </div>
+              <div class="circleLayout">
+                <div class="gridCircleLayout">
+                  <h3 class="circleOn show">Celsius</h3>
+                  <h3 class="circleOff hide">--</h3>
+                </div>
+              </div>
+              <div id="slider"></div>
+            </div>
+            <div class="controllerOptions">
+              <div class="optionConditioner selected">
+                <div><i class="selected far fa-snowflake"></i></div>
+              </div>
+              <div class="optionLighting">
+                <i class="far fa-sun"></i>
+              </div>
+              <div class="optionHeating">
+                <i class="fas fa-burn"></i>
+              </div>
+              <div class="optionRefresh">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="socialIcons">
+            <a href="#github"><i class="fab fa-github"></i></a>
+            <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#linkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.4.0/dist/roundslider.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
