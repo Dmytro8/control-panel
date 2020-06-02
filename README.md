@@ -1,2 +1,8 @@
-# Published
-The project was published on https://dmytro8.github.io/control-panel/
+# Control Panel
+The project contains realized UI for the management of IoT.
+
+# Tech stack
+  - HTML
+  - CSS
+  - Javascript
+  - jQuery
